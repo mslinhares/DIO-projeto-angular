@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Book } from '../model/books.model';
+import { BooksService } from '../product-list.service';
 
 @Component({
   selector: 'app-product-item',
@@ -12,6 +13,7 @@ export class ProductItemComponent implements OnInit {
 
   @Input()
   livro!: Book;
+  //livro: Array<Book> = [];
 
   constructor() {
 

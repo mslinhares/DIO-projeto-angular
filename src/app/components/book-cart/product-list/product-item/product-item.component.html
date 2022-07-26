@@ -1,19 +1,41 @@
-    <div class="card shadow-sm">
-      <img class="bd-placeholder-img card-img-top" width="100%"   src='{{ "assets/images/" + livro.img + ".jpg" }}'>
+<div class="card shadow-sm">
 
-      <div class="card-body">
-        <p class="card-text">{{ livro.name }}</p>
-        <p class="card-text">{{ livro.category }}</p>
-        <p class="card-text">{{ livro.quantity }}</p>
-        <p class="card-text">{{livro.price | currency:'BRL'}}</p>
+  <div class="card-body">
+    <p class="card-text">{{ livro.name }}</p>
+    <p class="card-text">{{ livro.category }}</p>
+    <p class="card-text">{{ livro.quantity }}</p>
+    <p class="card-text">{{livro.price | currency:'BRL'}}</p>
 
-
-
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-primary">Comprar</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
-          </div>
-        </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-primary">Comprar</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Detalhes</button>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+  <div class="col mb-5">
+    <div class="card h-100">
+      <!-- Product image
+      <img class="bd-placeholder-img card-img-top" width="100%" src='{{ "assets/images/" + livro.img + ".jpg" }}'>-->
+      <!-- Product details-->
+      <div class="card-body p-4">
+        <div class="text-center">
+          <!-- Product name-->
+          <h5 class="fw-bolder">{{ livro.name }}</h5>
+          <!-- Product category-->
+          <h6>{{ livro.category }}</h6>
+          <!-- Product {{ livro.quantity }}-->
+          <h6>{{ livro.quantity }}</h6>
+          <!-- Product price-->
+          {{ livro.price | currency:'BRL' }}
+        </div>
+      </div>
+      <!-- Product actions-->
+      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+        <div class="text-center"><a class="btn btn-outline-dark mt-auto">Comprar</a></div>
+      </div>
+    </div>
+  </div>

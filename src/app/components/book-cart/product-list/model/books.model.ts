@@ -6,6 +6,4 @@ export class Book
     quantity!: number;
     category!: string;
     img!: string;
-
-    
 }
